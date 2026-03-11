@@ -1,6 +1,74 @@
 # CLAUDE.md — Paul's Medical Workspace
-> Last updated: 2026-03-11 (rev 2)
+> Last updated: 2026-03-11 (rev 3)
 > Machine: LT-E7470 | User: JamesBond
+
+---
+
+## 🗂️ Repository Structure
+
+This repository is a **personal medical workspace configuration and documentation project** — not a software codebase. There is no compiled code, test suite, or build system.
+
+### Files in this repo
+
+```
+paul-medical-workspace/
+├── CLAUDE.md          ← This file. Primary instructions for AI assistants.
+└── README.md          ← One-line project description ("Paul Private Space")
+```
+
+### What this repo is for
+
+This git repository tracks the CLAUDE.md instructions file so that Paul's AI workflow rules are version-controlled and can be synced across sessions. The actual medical content (Obsidian vault, Anki cards, bệnh án Word docs, PPTX presentations) lives **outside** this repo on Paul's Windows machine and Google Drive — NOT inside this git repository.
+
+### Where real content lives (outside this repo)
+
+| Content Type | Location |
+|---|---|
+| Obsidian vault | `C:\Paul Obsidian Vault\` |
+| Medical notes | `C:\Paul Obsidian Vault\Môn chuyên ngành\` |
+| Anki cards (via plugin) | Managed through Obsidian → AnkiConnect |
+| Bệnh án Word docs | `G:\My Drive\BỆNH ÁN VTT\` |
+| PPTX presentations | `G:\My Drive\BỆNH ÁN VTT\` |
+| PPTX template | `C:\Users\JamesBond\Desktop\Templates\benh-an-noi-khoa.pptx` |
+
+---
+
+## 🔀 Git & Version Control
+
+### Repository info
+
+- **Remote:** `http://local_proxy@127.0.0.1:35053/git/thanhtraiii87/paul-medical-workspace`
+- **Main branch:** `main`
+- **Development branches:** `claude/<task-description>` pattern
+
+### Branch naming convention
+
+AI-generated branches follow the pattern:
+```
+claude/<short-description>-<session-id>
+```
+Example: `claude/add-claude-documentation-Grisv`
+
+### Commit conventions
+
+- Commits are made by `thanhtraiii87` (Paul's git account)
+- Commit messages describe what was changed in plain language
+- No strict conventional commits format required
+
+### Push protocol
+
+```bash
+git push -u origin <branch-name>
+```
+- Branch name MUST start with `claude/` and end with the session ID
+- Retry up to 4 times on network failure (2s → 4s → 8s → 16s backoff)
+
+### Workflow for AI assistants making changes
+
+1. Work on the designated `claude/` branch
+2. Edit only `CLAUDE.md` (and `README.md` if needed)
+3. Commit with a clear message
+4. Push to the remote branch
 
 ---
 
