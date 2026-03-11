@@ -4,6 +4,24 @@
 
 ---
 
+## 📦 Repository Overview
+
+**Repo name:** paul-medical-workspace
+**Purpose:** Personal AI assistant configuration file for Paul — a Year 4 medical student at Đại học Nguyễn Tất Thành, currently on internal medicine rotation at Bệnh Viện Nhân Dân Gia Định.
+
+**What this repo contains:**
+- `CLAUDE REPO.md` — This file. The master instruction set for all AI assistants working with Paul.
+- `README.md` — Minimal public description.
+
+**What this repo is NOT:**
+- Not a code repository — there is no source code, tests, or build system.
+- Not a shared team repo — this is Paul's private workspace config.
+
+**How to use this file:**
+Any AI assistant (Claude, ChatGPT, Gemini, etc.) assisting Paul should read this file first before starting any task. Follow all rules exactly as written.
+
+---
+
 ## 👤 About Me
 
 - **Tên:** Paul
@@ -126,19 +144,19 @@ Môn chuyên ngành\
 
 ### Cú pháp Cloze Card
 ```
-- Câu hỏi với {1:đáp án bị ẩn} #clozecard 
+- Câu hỏi với {1:đáp án bị ẩn} #clozecard
 ```
 ⚠️ Dùng `{1:...}` — KHÔNG dùng `{{c1::...}}`
 ⚠️ Có thể có nhiều `{1:...}` trong 1 câu — tất cả ẩn cùng lúc
 
 Ví dụ đúng:
 ```
-- Suy tim được chẩn đoán khi có {1:2 tiêu chí lớn} hoặc {1:1 lớn + 2 nhỏ} theo Framingham #clozecard 
+- Suy tim được chẩn đoán khi có {1:2 tiêu chí lớn} hoặc {1:1 lớn + 2 nhỏ} theo Framingham #clozecard
 ```
 
 ### Cú pháp Basic Card
 ```
-- Câu hỏi? #flashcard 
+- Câu hỏi? #flashcard
 - Đáp án dòng 1
 - Đáp án dòng 2
 ```
@@ -193,8 +211,8 @@ TARGET DECK: [deck name]
 **Bước 4 — Preview 5 cards đầu → chờ Paul duyệt:**
 ```
 Preview 5 cards:
-1. - Tiêu chuẩn chẩn đoán suy tim cần {1:2 tiêu chí lớn} hoặc {1:1 lớn + 2 nhỏ} #clozecard 
-2. - Triệu chứng lớn suy tim: {1:khó thở kịch phát về đêm}, {1:ran ẩm 2 đáy}, {1:gallop T3} #clozecard 
+1. - Tiêu chuẩn chẩn đoán suy tim cần {1:2 tiêu chí lớn} hoặc {1:1 lớn + 2 nhỏ} #clozecard
+2. - Triệu chứng lớn suy tim: {1:khó thở kịch phát về đêm}, {1:ran ẩm 2 đáy}, {1:gallop T3} #clozecard
 ...
 Tổng dự kiến: ~15 cards
 File đích: C:\Paul Obsidian Vault\Mon chuyen nganh\Noi\1. TIM MACH\SUY TIM.md
@@ -425,6 +443,21 @@ When Paul sends tasks from iPhone, assume:
 - Complete the task fully and save results to correct folder
 - Send a short completion summary he can read quickly
 - If blocked, describe the issue clearly and wait — do NOT guess
+
+---
+
+## 🔁 Git / Repo Workflow
+
+This repo is config-only (no code). When making changes to this file:
+
+```
+Branch convention: claude/<task-slug>-<id>
+Main branch: main
+```
+
+- Only `CLAUDE REPO.md` and `README.md` exist in this repo — do NOT create extra files
+- After editing `CLAUDE REPO.md`, commit with a descriptive message and push to the feature branch
+- Do NOT push directly to `main` without Paul's review
 
 ---
 
