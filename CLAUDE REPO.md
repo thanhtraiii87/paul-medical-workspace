@@ -1,4 +1,4 @@
-# CLAUDE.md — Paul's Medical Workspace
+# CLAUDE REPO.md — Paul's Medical Workspace
 > Last updated: 2026-03-11
 > Machine: LT-E7470 | User: JamesBond
 
